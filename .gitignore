@@ -7,9 +7,6 @@ pki/
 PKI/
 USERS_PKI/
 
-# JAR 파일들 (큰 바이너리 파일)
-*.jar
-
 # 사용량 데이터
 usage/
 
