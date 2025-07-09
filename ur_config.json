@@ -1,0 +1,181 @@
+{
+    "core": {
+        "requestHandlerThreadPoolSize": 5
+    },
+	"endpoints": [
+		{
+			"@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.http.HttpEndpoint",
+			"port": 8080,
+			"corsEnabled": true
+		},
+		{
+			"@class": "de.fraunhofer.iosb.ilt.faaast.service.endpoint.opcua.OpcUaEndpoint",
+			"tcpPort": 8081
+		}
+	],
+	"persistence":
+	{
+		"@class": "de.fraunhofer.iosb.ilt.faaast.service.persistence.memory.PersistenceInMemory"
+	},
+	"messageBus":
+	{
+		"@class": "de.fraunhofer.iosb.ilt.faaast.service.messagebus.internal.MessageBusInternal"
+	},
+	"assetConnections": [
+		{
+			"@class": "de.fraunhofer.iosb.ilt.faaast.service.assetconnection.opcua.OpcUaAssetConnection",
+			"host": "opc.tcp://172.21.43.90:4841",
+			"valueProviders": {
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Position": {
+					"nodeId": "ns=3;i=1971"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Speed": {
+					"nodeId": "ns=3;i=1977"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Effort": {
+					"nodeId": "ns=3;i=1983"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Position": {
+					"nodeId": "ns=3;i=1994"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Speed": {
+					"nodeId": "ns=3;i=2000"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Effort": {
+					"nodeId": "ns=3;i=2006"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Position": {
+					"nodeId": "ns=3;i=2017"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Speed": {
+					"nodeId": "ns=3;i=2023"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Effort": {
+					"nodeId": "ns=3;i=2029"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Position": {
+					"nodeId": "ns=3;i=2040"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Speed": {
+					"nodeId": "ns=3;i=2046"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Effort": {
+					"nodeId": "ns=3;i=2052"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Position": {
+					"nodeId": "ns=3;i=2063"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Speed": {
+					"nodeId": "ns=3;i=2069"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Effort": {
+					"nodeId": "ns=3;i=2075"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Position": {
+					"nodeId": "ns=3;i=2086"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Speed": {
+					"nodeId": "ns=3;i=2092"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Effort": {
+					"nodeId": "ns=3;i=2098"
+				}
+			},
+			"subscriptionProviders": {
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Position": {
+					"nodeId": "ns=3;i=1971"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Speed": {
+					"nodeId": "ns=3;i=1977"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_1_Effort": {
+					"nodeId": "ns=3;i=1983"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Position": {
+					"nodeId": "ns=3;i=1994"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Speed": {
+					"nodeId": "ns=3;i=2000"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_2_Effort": {
+					"nodeId": "ns=3;i=2006"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Position": {
+					"nodeId": "ns=3;i=2017"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Speed": {
+					"nodeId": "ns=3;i=2023"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_3_Effort": {
+					"nodeId": "ns=3;i=2029"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Position": {
+					"nodeId": "ns=3;i=2040"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Speed": {
+					"nodeId": "ns=3;i=2046"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_4_Effort": {
+					"nodeId": "ns=3;i=2052"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Position": {
+					"nodeId": "ns=3;i=2063"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Speed": {
+					"nodeId": "ns=3;i=2069"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_5_Effort": {
+					"nodeId": "ns=3;i=2075"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Position": {
+					"nodeId": "ns=3;i=2086"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Speed": {
+					"nodeId": "ns=3;i=2092"
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Property)Axis_6_Effort": {
+					"nodeId": "ns=3;i=2098"
+				}
+			},
+			"operationProviders": {
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Operation)Move_Robot": {
+					"nodeId": "ns=3;i=2134",
+					"parentNodeId": "ns=3;i=2099",
+					"inputArgumentMapping": [
+						{
+							"idShort": "AngleAxisToAxisX",
+							"argumentName": "AngleAxisToAxisX"
+						},
+						{
+							"idShort": "AngleAxisToAxisY",
+							"argumentName": "AngleAxisToAxisY"
+						},
+						{
+							"idShort": "AngleAxisToAxisZ",
+							"argumentName": "AngleAxisToAxisZ"
+						},
+						{
+							"idShort": "x_coordinate_position_location",
+							"argumentName": "x-coordinate position location"
+						},
+						{
+							"idShort": "y_coordinate_position_location",
+							"argumentName": "y-coordinate position location"
+						},
+						{
+							"idShort": "z_coordinate_position_location",
+							"argumentName": "z-coordinate position location"
+						}
+					],
+					"outputArgumentMapping": []
+				},
+				"(Submodel)urn:aas:id:edgebrain:robot:submodel:operationaldata, (Operation)Ready_Pose": {
+					"nodeId": "ns=3;i=2140",
+					"parentNodeId": "ns=3;i=2136",
+					"inputArgumentMapping": [],
+					"outputArgumentMapping": []
+				}
+			}
+		}
+	]
+} 

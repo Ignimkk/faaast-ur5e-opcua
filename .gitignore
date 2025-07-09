@@ -1,0 +1,28 @@
+# 로그 파일들
+logs/
+*.log
+
+# PKI 관련 파일들 (보안상 중요한 인증서 파일들)
+pki/
+PKI/
+USERS_PKI/
+
+# JAR 파일들 (큰 바이너리 파일)
+*.jar
+
+# 사용량 데이터
+usage/
+
+# 임시 파일들
+*.tmp
+*.temp
+
+# IDE 파일들
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS 생성 파일들
+.DS_Store
+Thumbs.db 

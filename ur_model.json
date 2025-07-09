@@ -1,0 +1,272 @@
+{
+	"assetAdministrationShells": [
+		{
+			"idShort": "EdgebrainRobotAAS",
+			"displayName": [
+				{
+					"language": "en",
+					"text": "Edgebrain Robot Asset Administration Shell"
+				}
+			],
+			"description": [
+				{
+					"language": "en",
+					"text": "Asset Administration Shell for Universal Robots UR5e collaborative robot"
+				}
+			],
+			"administration": {
+				"version": "1",
+				"revision": "0"
+			},
+			"submodels": [
+				{
+					"type": "ModelReference",
+					"keys": [
+						{
+							"type": "Submodel",
+							"value": "urn:aas:id:edgebrain:robot:submodel:operationaldata"
+						}
+					]
+				},
+				{
+					"type": "ModelReference",
+					"keys": [
+						{
+							"type": "Submodel",
+							"value": "urn:aas:id:edgebrain:robot:submodel:opcuaserveraccess"
+						}
+					]
+				}
+			],
+			"modelType": "AssetAdministrationShell"
+		}
+	],
+	"submodels": [
+		{
+			"idShort": "OperationalData",
+			"displayName": [
+				{
+					"language": "en",
+					"text": "Operational Data"
+				}
+			],
+			"description": [
+				{
+					"language": "en",
+					"text": "Real-time operational data of the robot including joint positions, speeds, and efforts"
+				}
+			],
+			"id": "urn:aas:id:edgebrain:robot:submodel:operationaldata",
+			"submodelElements": [
+				{
+					"idShort": "Axis_1_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_1_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_1_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_2_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_2_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_2_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_3_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_3_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_3_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_4_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_4_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_4_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_5_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_5_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_5_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_6_Position",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_6_Speed",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Axis_6_Effort",
+					"category": "Variable",
+					"valueType": "xs:double",
+					"modelType": "Property"
+				},
+				{
+					"idShort": "Move_Robot",
+					"category": "Function",
+					"modelType": "Operation",
+					"inputVariables": [
+						{
+							"value": {
+								"idShort": "AngleAxisToAxisX",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						},
+						{
+							"value": {
+								"idShort": "AngleAxisToAxisY",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						},
+						{
+							"value": {
+								"idShort": "AngleAxisToAxisZ",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						},
+						{
+							"value": {
+								"idShort": "x_coordinate_position_location",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						},
+						{
+							"value": {
+								"idShort": "y_coordinate_position_location",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						},
+						{
+							"value": {
+								"idShort": "z_coordinate_position_location",
+								"category": "Parameter",
+								"valueType": "xs:double",
+								"modelType": "Property"
+							}
+						}
+					],
+					"outputVariables": []
+				},
+				{
+					"idShort": "Ready_Pose",
+					"category": "Function",
+					"modelType": "Operation",
+					"inputVariables": [],
+					"outputVariables": []
+				}
+			],
+			"kind": "Instance",
+			"modelType": "Submodel"
+		},
+		{
+			"idShort": "OPCUAServerAccess",
+			"displayName": [
+				{
+					"language": "en",
+					"text": "OPC UA Server Access"
+				}
+			],
+			"description": [
+				{
+					"language": "en",
+					"text": "Configuration for OPC UA server connection and access parameters"
+				}
+			],
+			"id": "urn:aas:id:edgebrain:robot:submodel:opcuaserveraccess",
+			"submodelElements": [
+				{
+					"idShort": "ServerEndpoint",
+					"category": "Parameter",
+					"valueType": "xs:string",
+					"modelType": "Property",
+					"value": "opc.tcp://localhost:4841"
+				},
+				{
+					"idShort": "SecurityMode",
+					"category": "Parameter",
+					"valueType": "xs:string",
+					"modelType": "Property",
+					"value": "None"
+				}
+			],
+			"kind": "Instance",
+			"modelType": "Submodel"
+		}
+	],
+	"conceptDescriptions": []
+} 

@@ -1,0 +1,44 @@
+
+{
+	"namespaces":
+	{
+		"info:faaast:demo": [
+			{
+				"@type": "Operation",
+				"name": "Add",
+				"accessLevels": ["CurrentRead", "CurrentWrite"],
+				"userAccessLevels": ["CurrentRead", "CurrentWrite"],
+				"operation":
+				{
+					"implementationClass": "de.fraunhofer.iosb.ilt.opcua.server.operation.implementation.JavaScriptOperationImplementation",
+					"inputArguments": [
+						{
+							"name": "Input1",
+							"type": "Double"
+						},
+						{
+							"name": "Input2",
+							"type": "Double"
+						}
+					],
+					"outputArguments": [
+						{
+							"name": "Output",
+							"type": "Double"
+						}
+					],
+					"script": "Output = namespace.getNodeValue('Value') + Input1 + Input2; namespace.setNodeValue('Value', Output);"
+				}
+			},
+			{
+				"@type": "Variable",
+				"name": "Value",
+				"accessLevels": ["CurrentRead", "CurrentWrite"],
+				"userAccessLevels": ["CurrentRead", "CurrentWrite"],
+				"datatype": "Double",
+				"value": 42,
+				"actions": []
+			}
+		]
+	}
+}

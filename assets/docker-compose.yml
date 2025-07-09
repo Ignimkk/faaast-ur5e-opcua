@@ -1,0 +1,23 @@
+services:
+  opcua:
+    build: opcua
+    ports:
+      - 12686:12686
+  mqtt:
+    build: mqtt
+    ports:
+      - 1884:1884
+  http:
+    build: http
+    ports:
+      - 5001:5001
+#  faaast:
+#    image: fraunhoferiosb/faaast-service:1.1.0
+#    volumes:
+#      - ./faaast:/app/resources
+#    environment:
+#      - faaast_model=/app/resources/model.json
+#      - faaast_config=/app/resources/config.json
+#    ports:
+#      - 8080:8080
+#      - 8081:8081
